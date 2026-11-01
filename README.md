@@ -1,6 +1,6 @@
 # KOReader Genre Filter
 
-[![CI](https://github.com/YOUR-USERNAME/koreader-genre-filter/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR-USERNAME/koreader-genre-filter/actions/workflows/ci.yml)
+[![CI](https://github.com/Lana-Code3/koreader-genre-filter/actions/workflows/ci.yml/badge.svg)](https://github.com/Lana-Code3/koreader-genre-filter/actions/workflows/ci.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
 ![KOReader](https://img.shields.io/badge/KOReader-v2026.03-informational)
 ![Platform](https://img.shields.io/badge/device-Kobo%20%7C%20any%20KOReader-lightgrey)
@@ -26,21 +26,6 @@ Status:  Finished           Words:   "time travel"
 ![Filter dialog](docs/filter-dialog.png)
 ![Cover gallery](docs/gallery.png)
 -->
-
-## Table of Contents
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [How matching works](#how-matching-works)
-- [Reading status and the Kobo reader](#reading-status-and-the-kobo-reader)
-- [Settings](#settings)
-- [Project layout](#project-layout)
-- [Development](#development)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgements](#acknowledgements)
 
 ---
 
