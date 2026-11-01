@@ -27,7 +27,25 @@ Status:  Finished           Words:   "time travel"
 ![Cover gallery](docs/gallery.png)
 -->
 
-## Features
+## Table of Contents
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How matching works](#how-matching-works)
+- [Reading status and the Kobo reader](#reading-status-and-the-kobo-reader)
+- [Settings](#settings)
+- [Project layout](#project-layout)
+- [Development](#development)
+- [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgements](#acknowledgements)
+
+---
+
+<details>
+<summary><b>Features</b></summary>
 
 - **Include / exclude genres.** Books must match the included genres and are
   dropped if they have *any* excluded genre. Include can match *any* or *all*
@@ -49,7 +67,10 @@ Status:  Finished           Words:   "time travel"
 - Remembers your last filter and options.
 - Optional gesture/Dispatcher action.
 
-## Requirements
+</details>
+
+<details>
+<summary><b>Requirements</b></summary>
 
 | | |
 |---|---|
@@ -58,7 +79,10 @@ Status:  Finished           Words:   "time travel"
 | Metadata | Books need genres in their metadata (EPUB subjects, Calibre tags, PDF keywords) |
 | Kobo status | Kobo device with the stock `KoboReader.sqlite` library database (optional) |
 
-## Installation
+</details>
+
+<details>
+<summary><b>Installation</b></summary>
 
 ### Kobo (KFMon / NickelMenu / OCP-style packages)
 
@@ -102,7 +126,10 @@ Open the file browser, go to the **Search** tab (magnifier icon). You should see
 **Genre filter search**. If not, open the top menu and check *More tools > Plugin
 management*.
 
-## Usage
+</details>
+
+<details>
+<summary><b>Usage</b></summary>
 
 Open **Search > Genre filter search**.
 
@@ -132,7 +159,10 @@ At least one of genres, words or a status must be set.
 - **Top-left menu icon** switches to select mode (add to collection, etc.), as
   in the built-in file search.
 
-## How matching works
+</details>
+
+<details>
+<summary><b>How matching works</b></summary>
 
 Genres come from each book's *keywords* metadata (EPUB `dc:subject`, Calibre
 tags, PDF keywords). Multiple tags can be separated by commas, semicolons,
@@ -157,7 +187,10 @@ pipes or newlines.
 | Romance, Drama | Comedy | Romance / Drama / Romance+Drama | anything tagged Comedy, books with neither genre |
 | Sci-Fi | Fantasy, Horror | Sci-Fi | Sci-Fi that is also Fantasy or Horror |
 
-## Reading status and the Kobo reader
+</details>
+
+<details>
+<summary><b>Reading status and the Kobo reader</b></summary>
 
 KOReader's reading status lives in per-book sidecar files, which only exist for
 books you opened in KOReader. Books read in the **native Kobo reader** therefore
@@ -179,12 +212,18 @@ To fix that, the plugin reads Kobo's own library database
 
 The database is never modified.
 
-## Settings
+</details>
+
+<details>
+<summary><b>Settings</b></summary>
 
 Your last filter and options are stored in KOReader's global settings under the
 key `genre_filter`. Delete that key (or reset settings) to start fresh.
 
-## Project layout
+</details>
+
+<details>
+<summary><b>Project layout</b></summary>
 
 ```
 genre_filter.koplugin/
@@ -208,7 +247,10 @@ How it works, briefly:
 - The gallery is a `Menu` using CoverBrowser's `CoverMenu` for drawing and
   background cover extraction, with its own two-column item layout.
 
-## Development
+</details>
+
+<details>
+<summary><b>Development</b></summary>
 
 ```sh
 # unit tests (Lua 5.1 or LuaJIT)
@@ -224,7 +266,10 @@ zips to a release.
 To try changes quickly, copy `genre_filter.koplugin/` into your KOReader
 `plugins/` folder and restart KOReader (or use the emulator on desktop).
 
-## Troubleshooting
+</details>
+
+<details>
+<summary><b>Troubleshooting</b></summary>
 
 | Problem | Fix |
 |---|---|
@@ -234,20 +279,31 @@ To try changes quickly, copy `genre_filter.koplugin/` into your KOReader
 | No covers in the gallery | CoverBrowser must be enabled; covers fill in as extraction finishes |
 | Status filter ignores Kobo books | Check `/mnt/onboard/.kobo/KoboReader.sqlite` exists; the plugin shows a notice when it cannot read it |
 
-## Contributing
+</details>
+
+<details>
+<summary><b>Contributing</b></summary>
 
 Issues and pull requests are welcome. Please include your device, KOReader
 version and the filter you used when reporting a bug (the issue template asks
 for this).
 
-## License
+</details>
+
+<details>
+<summary><b>License</b></summary>
 
 [GNU AGPL v3.0](LICENSE), the same license as KOReader. This plugin adapts
 patterns from KOReader's `FileSearcher` and CoverBrowser code, which are
 AGPL-3.0.
 
-## Acknowledgements
+</details>
+
+<details>
+<summary><b>Acknowledgements</b></summary>
 
 - The [KOReader](https://github.com/koreader/koreader) project and contributors.
 - Kobo is a trademark of Rakuten Kobo Inc. This project is not affiliated with
   or endorsed by KOReader, Kobo or Rakuten.
+
+</details>
