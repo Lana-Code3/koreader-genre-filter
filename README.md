@@ -12,20 +12,14 @@ either in KOReader's normal results list or in a **two-column large-cover
 gallery** that shows each book's title, author, reading status and tags.
 
 ```
-Include: Romance, Drama     Exclude: Comedy
 Include: Sci-Fi             Exclude: Fantasy, Horror
 Status:  Finished           Words:   "time travel"
 ```
 
 > **Status:** written against the KOReader **v2026.03** source. The matching
 > logic has unit tests (`tests/`). The UI parts have been developed against the
-> KOReader source but need testing on real devices, so please
+> KOReader source but need testing on real devices, so feel free to
 > [open an issue](../../issues) if something looks wrong.
-
-<!-- Add screenshots to docs/ and reference them here, e.g.
-![Filter dialog](docs/filter-dialog.png)
-![Cover gallery](docs/gallery.png)
--->
 
 ---
 
@@ -36,7 +30,7 @@ Status:  Finished           Words:   "time travel"
   dropped if they have *any* excluded genre. Include can match *any* or *all*
   of the listed genres.
 - **Word search** in the title and (optionally) the description. All words must
-  match; use quotes for phrases: `dragon "time travel"`.
+  match; use quotes for phrases: `"murder", "time travel"`.
 - **Reading status filter** (New, Reading, On hold, Finished), including
   status from the **native Kobo reader**, not just KOReader's own
   ([details](#reading-status-and-the-kobo-reader)).
@@ -120,8 +114,8 @@ Open **Search > Genre filter search**.
 
 | Control | What it does |
 |---|---|
-| **Include genres** | Comma-separated list, e.g. `Romance, Drama` |
-| **Exclude genres** | Comma-separated list, e.g. `Comedy`. Any match removes the book |
+| **Include genres** | Comma-separated list, e.g. `Sci-Fi` |
+| **Exclude genres** | Comma-separated list, e.g. `Fantasy, Horror`. Any match removes the book |
 | **Words in title or description** | Optional. All words must appear; `"quoted phrases"` are kept together |
 | **Keyboard** | Hides the keyboard if it is up, shows it if it is down |
 | **Browse genres** | Scans your library and lists genres with counts. Tap = include, hold = exclude |
